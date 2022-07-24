@@ -12,7 +12,7 @@ export class Helper {
 
     getCookie() {
         cy.getCookie('user').then(cookie => {
-            cy.wrap(`${cookie.name}=${cookie.value}`).as('cookie');
+           cy.wrap(cookie.name + '=' + cookie.value).as('cookie');
         })
     }
 }
